@@ -11,4 +11,8 @@ export class AboutPage {
 
   }
 
+  ionViewWillEnter(){
+    console.log('Enter Page 2');
+  }
+
 }

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, Slides } from 'ionic-angular';
 
 @Component({
   selector: 'page-contact',
@@ -7,8 +7,15 @@ import { NavController } from 'ionic-angular';
 })
 export class ContactPage {
 
+  @ViewChild('mySlider') slider: Slides;
+
   constructor(public navCtrl: NavController) {
 
+  }
+
+  onSlideChanged(e){
+    let currentIndex = this.slider.getActiveIndex();
+    console.log("You are on Slide ", (currentIndex + 1));
   }
 
 }
